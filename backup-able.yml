@@ -1,0 +1,6 @@
+services:
+  backupable:
+      volumes:
+        - ${HOST_PATH_HTTPD_DATADIR}:/shared/httpd:rw${MOUNT_OPTIONS}
+        - ${DEVILBOX_PATH}/supervisor:/etc/supervisor/custom.d:rw${MOUNT_OPTIONS}
+        - devilbox-mail:/var/mail:rw${MOUNT_OPTIONS}
